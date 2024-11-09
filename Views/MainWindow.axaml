@@ -19,14 +19,31 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel />
     </Design.DataContext>
-    <StackPanel HorizontalAlignment="Center"
-                VerticalAlignment="Center">
-        <TextBlock Text="{Binding Greeting}"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Background="{DynamicResource BgBody}"
-                   Foreground="{DynamicResource TextPrimary}" />
-        <Button Content="切换主题"
-                Command="{Binding ChangeThemeCommand}" />
-    </StackPanel>
+    <DockPanel Background="{DynamicResource BgBody}">
+        <!-- tool area -->
+        <Border x:Name="AppToolBar"
+                Width="70"
+                Background="{DynamicResource BgToolBar}"
+                BorderBrush="{DynamicResource BorderColor}"
+                BorderThickness="0,0,1,0"
+                DockPanel.Dock="Left" />
+        <!-- second menu -->
+        <Border IsVisible="True"
+                Width="210"
+                BorderBrush="{DynamicResource BorderColor}"
+                BorderThickness="0,0,1,0"
+                DockPanel.Dock="Left"
+                Padding="10" />
+        <!-- work area -->
+        <Border>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Greeting}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Background="{DynamicResource BgBody}"
+                           Foreground="{DynamicResource TextPrimary}" />
+                <Button Content="切换主题" Command="{Binding ChangeThemeCommand}" />
+            </StackPanel>
+        </Border>
+    </DockPanel>
 </Window>
