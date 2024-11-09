@@ -66,3 +66,4 @@ D:\Code\c#\Bee\obj\Debug\net8.0\refint\Avalonia\Bee.dll
 D:\Code\c#\Bee\obj\Debug\net8.0\Bee.csproj.Up2Date
 D:\Code\c#\Bee\obj\Debug\net8.0\Bee.genruntimeconfig.cache
 D:\Code\c#\Bee\obj\Debug\net8.0\ref\Bee.dll
+d:\Code\c#\Bee\obj\Debug\net8.0\Bee.sourcelink.json
