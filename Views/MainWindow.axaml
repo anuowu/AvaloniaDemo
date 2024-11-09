@@ -19,9 +19,14 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel />
     </Design.DataContext>
-    <TextBlock Text="{Binding Greeting}"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center"
-               Background="{DynamicResource BgBody}"
-               Foreground="{DynamicResource TextPrimary}" />
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Text="{Binding Greeting}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Background="{DynamicResource BgBody}"
+                   Foreground="{DynamicResource TextPrimary}" />
+        <Button Content="切换主题"
+                Command="{Binding ChangeThemeCommand}" />
+    </StackPanel>
 </Window>
